@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html ng-app="appStoreApp">
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>011_ng-repeat-track-by</title>
+</head>
+<body ng-controller="MainCtrl">
+
+<button ng-click="refreshApp()">Refresh</button>
+
+<ul>
+    <li ng-repeat="app in apps1">
+        <h3 ng-bind="app.name"></h3>
+        <span ng-bind="app.description"></span>
+        <span ng-bind="app.$$hashKey"></span>
+    </li>
+</ul>
+<hr/>
+<ul>
+    <li ng-repeat="app in apps2 track by app.id">
+        <h3 ng-bind="app.name"></h3>
+        <span ng-bind="app.description"></span>
+        <span ng-bind="app.$$hashKey"></span>
+    </li>
+</ul>
+
+<script type="text/javascript" src="../resources/angular/angular.min.js"></script>
+<script type="text/javascript" src="app.js"></script>
+</body>
+</html>

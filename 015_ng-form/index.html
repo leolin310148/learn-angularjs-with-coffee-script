@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html ng-app="SignUpApp">
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>015_ng-form</title>
+</head>
+<body ng-controller="SignUpCtrl">
+<form name="MyForm">
+    <h4>Sub Form 1</h4>
+    <ng-form name="SubForm1">
+        <p>
+            First Name:
+            <input ng-model="user.firstName" type="text" name="firstName" required/>
+        </p>
+
+        <p>
+            Last Name:
+            <input ng-model="user.lastName" type="text" name="lastName" required/>
+        </p>
+    </ng-form>
+    <hr/>
+    <h4>Sub Form 2</h4>
+    <ng-form name="SubForm2">
+        <p>
+            Account:
+            <input ng-model="user.account" type="text" name="account" required ng-minlength="6"/>
+        </p>
+
+        <p>
+            Email:
+            <input ng-model="user.email" type="email" name="email" required/>
+        </p>
+
+
+    </ng-form>
+
+    <ul ng-show="SubForm1.$invalid">
+        Sub Form 1 not valid
+        <li ng-show="SubForm1.firstName.$error.required">
+            First Name is required
+        </li>
+        <li ng-show="SubForm1.lastName.$error.required">
+            Last Name is required
+        </li>
+    </ul>
+    <ul ng-show="SubForm2.$invalid">
+        Sub Form 2 not valid
+        <li ng-show="SubForm2.account.$error.required ||SubForm2.account.$error.minlength">
+            Account must be at lease 6 chars
+        </li>
+        <li ng-show="SubForm2.email.$error.required">
+            Email is required
+        </li>
+        <li ng-show="SubForm2.email.$error.email">
+            Email format is invalid
+        </li>
+    </ul>
+
+    <input type="submit" ng-disabled="MyForm.$invalid"/>
+</form>
+
+
+<script type="text/javascript" src="../resources/angular/angular.min.js"></script>
+<script type="text/javascript" src="app.js"></script>
+</body>
+</html>

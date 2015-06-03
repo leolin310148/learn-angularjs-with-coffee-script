@@ -1,0 +1,2 @@
+Learing AngularJs with CoffeeScript.
+===================================

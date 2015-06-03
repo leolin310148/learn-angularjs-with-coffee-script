@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html ng-app="appStoreApp">
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>010_ng-repeat-vars</title>
+</head>
+<body ng-controller="MainCtrl">
+
+<ul>
+    <li ng-repeat="app in apps">
+        <h3 ng-bind="app.name"></h3><span ng-bind="app.description"></span>
+
+        <p>
+            index:<span ng-bind="$index"></span>
+        </p>
+
+        <p>
+            even:<span ng-bind="$even"></span>
+        </p>
+
+        <p>
+            odd:<span ng-bind="$odd"></span>
+        </p>
+
+        <p>
+            middle:<span ng-bind="$middle"></span>
+        </p>
+
+        <p>
+            first:<span ng-bind="$first"></span>
+        </p>
+
+        <p>
+            last:<span ng-bind="$last"></span>
+        </p>
+    </li>
+</ul>
+
+<script type="text/javascript" src="../resources/angular/angular.min.js"></script>
+<script type="text/javascript" src="app.js"></script>
+</body>
+</html>

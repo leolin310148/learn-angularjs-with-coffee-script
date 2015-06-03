@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html ng-app="MyApp">
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>016_checkbox_radiobutton</title>
+</head>
+<body ng-controller="MyCtrl">
+<form name="MyForm">
+    <hr/>
+    <h4>Bind true or false</h4>
+
+    <p>
+        <label>
+            <input ng-model="isAdmin" type="checkbox"/>Is Admin?
+        </label>
+        <span ng-bind="isAdmin"></span>
+    </p>
+    <hr/>
+    <h4>ng-true-value</h4>
+
+    <p>
+        <label>
+            <input ng-model="gender"
+                   type="checkbox"
+                   ng-true-value="'YES'"
+                   ng-false-value="'NO'"/>
+            AngularJs good?
+        </label>
+        <span ng-bind="gender"></span>
+    </p>
+
+    <p>
+    <h4>Gender</h4>
+    <label>
+        <input ng-model="user.gender"
+               type="radio" name="gender"
+               value="male"
+                />
+        male
+    </label>
+    <label>
+        <input ng-model="user.gender"
+               type="radio" name="gender"
+               value="female"
+                />
+        female
+    </label>
+    <br/>
+    user is {{user.gender}}
+    </p>
+
+</form>
+
+
+<script type="text/javascript" src="../resources/angular/angular.min.js"></script>
+<script type="text/javascript" src="app.js"></script>
+</body>
+</html>

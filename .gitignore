@@ -1,0 +1,5 @@
+.idea
+**/AngularJs_CoffeeScript.iml
+resources
+*/app.js
+*/app.js.map

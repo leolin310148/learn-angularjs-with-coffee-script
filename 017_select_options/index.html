@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html ng-app="MyApp">
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>017_select_options</title>
+</head>
+<body ng-controller="MyCtrl">
+{{user}}
+<p>
+    <select ng-model="user.gender">
+        <option value="female">female</option>
+        <option value="male">male</option>
+    </select>
+</p>
+<p>
+    <select ng-model="user.gender2" ng-options="g.value as g.label for g in genders">
+    </select>
+</p>
+
+<script type="text/javascript" src="../resources/angular/angular.min.js"></script>
+<script type="text/javascript" src="app.js"></script>
+</body>
+</html>

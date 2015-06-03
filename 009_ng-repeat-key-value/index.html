@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html ng-app="appStoreApp">
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>009_ng-repeat-key-value</title>
+</head>
+<body ng-controller="MainCtrl">
+
+<ul>
+    <li ng-repeat="(appName,app) in apps">
+        <h3 ng-bind="appName"></h3><span ng-bind="app.description"></span>
+    </li>
+</ul>
+
+<script type="text/javascript" src="../resources/angular/angular.min.js"></script>
+<script type="text/javascript" src="app.js"></script>
+</body>
+</html>

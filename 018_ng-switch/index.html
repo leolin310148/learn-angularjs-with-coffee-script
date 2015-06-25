@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html ng-app="MyApp">
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>017_select_options</title>
+</head>
+<body ng-controller="MyCtrl">
+<ul ng-init="page=1">
+    <li ng-click="page=1"><a href="#">1</a></li>
+    <li ng-click="page=2"><a href="#">2</a></li>
+    <li ng-click="page=3"><a href="#">3</a></li>
+</ul>
+<div ng-switch on="page">
+    <div ng-switch-when="1">First page</div>
+    <div ng-switch-when="2">Second page</div>
+    <div ng-switch-when="3">Third page</div>
+</div>
+
+<script type="text/javascript" src="../resources/angular/angular.min.js"></script>
+<script type="text/javascript" src="app.js"></script>
+</body>
+</html>
